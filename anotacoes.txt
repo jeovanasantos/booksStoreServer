@@ -1,0 +1,3 @@
+/*caso nao funcione "nodemon app.js" coloque esse ""scripts": {
+  "start": "nodemon SeuArquivoDeServidor.js"
+}" no package.json e rode com "npm start"*/
