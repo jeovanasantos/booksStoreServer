@@ -2,7 +2,7 @@ const express = require("express");
 const rotaLivro = require("./rotas/livro")
 const app = express();
 app.use(express.json())
-const port = 8000;
+const port = 8080;
 
 app.use('/livros', rotaLivro)
 app.listen(port, () => {
