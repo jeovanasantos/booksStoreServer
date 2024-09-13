@@ -1,9 +1,9 @@
-const { getTodosFavoritos, insereFavorito, deletaFavoritoPorId } = require("../servicos/favorito")
+const { getTodosFavoritos, insereFavorito,  deletaFavoritosPorId} = require("../servicos/favoritos")
 
 function getFavoritos(req, res) {
     try {
-        const livros = getTodosFavoritos()
-        res.send(livros)
+        const livrosFavoritos = getTodosFavoritos()
+        res.send(livrosFavoritos)
     } catch (error) {
         res.status(500)
         res.send(error.message)
@@ -27,7 +27,7 @@ function deleteFavorito(req, res) {
         const id = req.params.id
 
         if(id && Number(id)) {
-            deletaFavoritoPorId(id)
+            deletaFavoritosPorId(id)
             res.send("Favorito deletado com sucesso")
         } else {
             res.status(422)
